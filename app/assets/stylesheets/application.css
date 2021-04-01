@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+html, body {
+    height: 100%;
+}
+
+div.main-app-container {
+    height: 100%;
+}
