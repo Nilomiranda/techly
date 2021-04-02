@@ -2,8 +2,8 @@
 
 one:
   content: MyString
-  belongs_to: 
+  user: one
 
 two:
   content: MyString
-  belongs_to: 
+  user: two

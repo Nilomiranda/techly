@@ -14,8 +14,8 @@ class TweetsTest < ApplicationSystemTestCase
     visit tweets_url
     click_on "New Tweet"
 
-    fill_in "Belongs to", with: @tweet.belongs_to
     fill_in "Content", with: @tweet.content
+    fill_in "User", with: @tweet.user_id
     click_on "Create Tweet"
 
     assert_text "Tweet was successfully created"
@@ -26,8 +26,8 @@ class TweetsTest < ApplicationSystemTestCase
     visit tweets_url
     click_on "Edit", match: :first
 
-    fill_in "Belongs to", with: @tweet.belongs_to
     fill_in "Content", with: @tweet.content
+    fill_in "User", with: @tweet.user_id
     click_on "Update Tweet"
 
     assert_text "Tweet was successfully updated"
