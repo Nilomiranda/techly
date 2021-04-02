@@ -9,23 +9,26 @@
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'notifications' %>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 </head>
 <body>
   <div class="main-app-container">
-    <% if notice %>
-      <div class="notification is-success">
-        <button class="delete"></button>
-        <%= notice %>
-      </div>
-    <% end %>
+    <div class="container pt-4">
+      <% if notice %>
+        <div class="notification is-success">
+          <button class="delete"></button>
+          <%= notice %>
+        </div>
+      <% end %>
 
-    <% if alert %>
-      <div class="notification is-warning">
-        <button class="delete"></button>
-        <%= alert %>
-      </div>
-    <% end %>
+      <% if alert %>
+        <div class="notification is-warning">
+          <button class="delete"></button>
+          <%= alert %>
+        </div>
+      <% end %>
+    </div>
 
     <%= yield %>
   </div>
