@@ -7,7 +7,7 @@
     <% if current_user.description %>
       <p><%= current_user.description %></p>
     <% else %>
-        <%= link_to 'Add profile description' %>
+        <button type="button" class="modal-btn" data-modal="edit-description-modal">Edit your description</button>
     <% end %>
 
   </div>
