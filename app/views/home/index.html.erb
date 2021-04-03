@@ -5,7 +5,12 @@
   <div class="column">
     <p class="has-text-weight-bold"><%= current_user.nickname %></p>
     <% if current_user.description %>
-      <p><%= current_user.description %></p>
+    <span class="icon">
+      <i class="fas fa-home"></i>
+    </span>
+  <span>Home</span>
+</span>
+      <p><%= current_user.description %><span><button type="button" class="modal-btn button is-info is-link is-small" data-modal="edit-description-modal">Edit</button></span></p>
     <% else %>
       <br/>
       <button type="button" class="modal-btn button is-info is-light is-small" data-modal="edit-description-modal">Edit your description</button>
