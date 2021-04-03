@@ -1,2 +1,22 @@
 <%= render 'layouts/partials/navigation' %>
-<h1 class="is-size-1">Home</h1>
+<%= render 'layouts/edit_description' %>
+
+<div class="columns p-6">
+  <div class="column">
+    <p class="has-text-weight-bold"><%= current_user.nickname %></p>
+    <% if current_user.description %>
+      <p><%= current_user.description %></p>
+    <% else %>
+        <%= link_to 'Add profile description' %>
+    <% end %>
+
+  </div>
+  <div class="column">
+    <% @tweets.each do |tweet| %>
+      <h1><%= tweet.content %></h1>
+    <% end %>
+  </div>
+  <div class="column">
+    <h1>Highlights</h1>
+  </div>
+</div>
