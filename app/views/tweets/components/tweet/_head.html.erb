@@ -16,7 +16,7 @@
     <span><%= time_ago_in_words(tweet.created_at) %> ago</span>
 
     <% if tweet.user.id == current_user.id %>
-    <%= render "tweets/components/options_dropdown" %>
+    <%= render "tweets/components/options_dropdown", tweet: tweet %>
     <% end %>
   </div>
 </div>

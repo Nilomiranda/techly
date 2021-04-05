@@ -1,14 +1,23 @@
-<div class="dropdown is-active">
-  <span><%= fa_icon "ellipsis-h", class:"ml-4 cursor-pointer" %></span>
+<div class="dropdown">
+  <span id="dropdown-button"><%= fa_icon "ellipsis-h", class:"ml-4 cursor-pointer" %></span>
   <div class="dropdown-menu" id="dropdown-menu" role="menu">
     <div class="dropdown-content">
       <a href="#" class="dropdown-item">
         Edit
       </a>
       <hr class="dropdown-divider">
-      <a href="#" class="dropdown-item has-text-danger">
-        Delete
-      </a>
+      <span class="dropdown-item">
+        <%= link_to 'Delete', tweet_path(tweet.id), method: :delete, class:"has-text-danger" %>
+      </span>
     </div>
   </div>
 </div>
+
+<script>
+  (document.querySelectorAll('#dropdown-button') || []).forEach(($button) => {
+      console.log($button)
+      $button.addEventListener('click', (event) => {
+          $button.parentNode.classList.toggle('is-active')
+      })
+  })
+</script>
