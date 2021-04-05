@@ -1,0 +1,22 @@
+<div class="is-flex is-align-items-center is-justify-content-space-between mb-4">
+  <div>
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-32x32">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="subtitle is-6">@<%= tweet.user.nickname %></p>
+      </div>
+    </div>
+  </div>
+  <!-- when tweet was published -->
+  <div class="is-flex is-align-items-center">
+    <span><%= time_ago_in_words(tweet.created_at) %> ago</span>
+
+    <% if tweet.user.id == current_user.id %>
+    <%= render "tweets/components/options_dropdown" %>
+    <% end %>
+  </div>
+</div>

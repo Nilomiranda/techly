@@ -1,0 +1,20 @@
+<div class="box">
+  <br />
+  <%= form_with model: Tweet, url: tweets_path, html: { method: :post } do |form| %>
+    <div class="field">
+      <div class="control">
+        <%= form.text_area :content, class:"textarea", rows: 7 %>
+      </div>
+    </div>
+
+    <br/>
+
+    <div class="tabs is-toggle is-right">
+      <ul>
+        <li class="is-active">
+          <%= form.submit 'Save', class:"button is-normal is-primary" %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+</div>
