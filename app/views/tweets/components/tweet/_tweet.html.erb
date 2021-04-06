@@ -1,5 +1,9 @@
-<div class="mb-6">
+<div>
   <%= render "tweets/components/tweet/head", tweet: tweet %>
-  <%= render "tweets/components/tweet/content", tweet: tweet %>
-  <%= render "tweets/components/tweet/footer", tweet: tweet %>
+  <%= link_to tweet_path(tweet.id) do %>
+    <%= render "tweets/components/tweet/content", tweet: tweet %>
+  <% end %>
+  <% if 0 == 1 %>
+    <%= render "tweets/components/tweet/footer", tweet: tweet %>
+  <% end %>
 </div>

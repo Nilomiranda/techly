@@ -1,5 +1,5 @@
 <div class="dropdown">
-  <span id="dropdown-button"><%= fa_icon "ellipsis-h", class:"ml-4 cursor-pointer" %></span>
+  <span data-tweet="dropdown-button-<%= tweet.id %>"><%= fa_icon "ellipsis-h", class:"ml-4 cursor-pointer" %></span>
   <div class="dropdown-menu" id="dropdown-menu" role="menu">
     <div class="dropdown-content">
       <a href="#" class="dropdown-item">
@@ -14,10 +14,9 @@
 </div>
 
 <script>
-  (document.querySelectorAll('#dropdown-button') || []).forEach(($button) => {
-      console.log($button)
+  (document.querySelectorAll('span[data-tweet="dropdown-button-<%= tweet.id %>"]') || []).forEach(($button) => {
       $button.addEventListener('click', (event) => {
-          $button.parentNode.classList.toggle('is-active')
+          $button.parentNode.classList.toggle('is-active');
       })
   })
 </script>

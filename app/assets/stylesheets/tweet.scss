@@ -1,0 +1,23 @@
+.tweet-card {
+  padding: 1rem;
+  transition: background-color 150ms ease-in-out;
+  box-sizing: content-box;
+
+  &:hover {
+    background: rgba(0,0,0, .02);
+  }
+
+  a {
+    color: unset;
+  }
+
+  &__header {
+    a {
+      flex: 1;
+    }
+
+    &__author {
+      flex: 1;
+    }
+  }
+}

@@ -1,3 +1,5 @@
 <% @tweets.each do |tweet| %>
-  <%= render "tweets/components/tweet/tweet", tweet: tweet %>
+  <div class="tweet-card cursor-pointer mb-6">
+    <%= render "tweets/components/tweet/tweet", tweet: tweet %>
+  </div>
 <% end %>

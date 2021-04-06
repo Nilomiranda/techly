@@ -26,3 +26,7 @@ div.main-app-container {
 .cursor-pointer {
     cursor: pointer;
 }
+
+textarea {
+    resize: none;
+}
