@@ -30,3 +30,7 @@ div.main-app-container {
 textarea {
     resize: none;
 }
+
+.modal {
+    animation-duration: 0.2s !important;
+}

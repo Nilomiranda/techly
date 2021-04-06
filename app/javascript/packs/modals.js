@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     (document.querySelectorAll('.modal-btn') || []).forEach(($modalBtn) => {
+        console.log($modalBtn)
+
         $modalBtn.addEventListener('click', () => {
             console.log($modalBtn.dataset.modal)
 
