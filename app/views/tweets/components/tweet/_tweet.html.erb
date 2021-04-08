@@ -3,7 +3,6 @@
   <%= link_to tweet_path(tweet.id) do %>
     <%= render "tweets/components/tweet/content", tweet: tweet %>
   <% end %>
-  <% if 0 == 1 %>
-    <%= render "tweets/components/tweet/footer", tweet: tweet %>
-  <% end %>
+
+  <%= render "tweets/components/tweet/footer", tweet: tweet %>
 </div>

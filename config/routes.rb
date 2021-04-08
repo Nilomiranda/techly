@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   patch '/users/update_description', to: 'user#update_description'
+
+  post '/tweets/:tweet_id/like', to: 'tweet_likes#toggle_likes', as: 'tweet_like'
 end
