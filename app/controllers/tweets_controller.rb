@@ -1,6 +1,8 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_tweet, only: %i[ show edit update destroy ]
+  before_action :get_logged_user_tweets_count
+
 
   # GET /tweets or /tweets.json
   def index

@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :show_params, if: :devise_controller?
 
   protected
 
-  def show_params
-    puts('params', params)
+  def get_logged_user_tweets_count
+    if current_user[:id].present?
+      @logged_user_tweets_count = Tweet.where(user_id: current_user.id).count
+    end
   end
 
   def configure_permitted_parameters

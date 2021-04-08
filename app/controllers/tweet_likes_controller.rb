@@ -7,8 +7,6 @@ class TweetLikesController < ApplicationController
 
     existing_like = TweetLike.where('user_id = :user_id and tweet_id = :tweet_id', { user_id: current_user_id, tweet_id: tweet_id }).first
 
-    puts('existing_like', existing_like.as_json)
-
     if existing_like.present?
       TweetLike.destroy(existing_like[:id])
     else
